@@ -29,6 +29,9 @@ chmod +x ~/.vnc/xstartup
 # Khởi động lại VNC server
 vncserver :1 -geometry 1100x710 -depth 24
 
-# Cài đặt Google Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb -y
+# Tải và cài đặt Google Chrome
+wget -O /tmp/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install /tmp/google-chrome-stable_current_amd64.deb -y
+
+# Xóa tệp .deb sau khi cài đặt
+rm -f /tmp/google-chrome-stable_current_amd64.deb
